@@ -1,148 +1,133 @@
-import React, { useState } from 'react';
-import { Github, Linkedin, Mail, Phone, ExternalLink, Code, Database, Layout, Smartphone, ChevronDown } from 'lucide-react';
+import React from 'react';
+import { Mail, Phone, ArrowUpRight, Code, Database, Layout, Smartphone, Github, Linkedin } from 'lucide-react';
 
 const App = () => {
-  const [activeTab, setActiveTab] = useState('all');
-
   return (
-    <div className="portfolio-container">
+    <div className="container">
+      {/* --- NAVBAR --- */}
+      <nav className="navbar">
+        <div className="logo">Ayush.</div>
+        <div className="nav-links">
+          <a href="#services">Services</a>
+          <a href="#projects">Works</a>
+          <a href="#about">About</a>
+          <a href="#experience">Experience</a>
+        </div>
+        <div className="contact-number">
+          <Phone size={16} /> +91 8299540876
+        </div>
+      </nav>
+
       {/* --- HERO SECTION --- */}
       <header className="hero">
-        <div className="hero-content">
-          <h1 className="name">Ayush Singh</h1>
-          <h2 className="title">Full Stack Developer</h2>
-          <p className="tagline">
-            Specializing in Java, Node.js, and Scalable Web Solutions. <br />
-            300+ DSA Problems Solved.
+        <div className="hero-left">
+           {/* Email oriented vertically like the design */}
+          <a href="mailto:ayushsingh.as1920@gmail.com" className="vertical-email">
+            ayushsingh.as1920@gmail.com
+          </a>
+        </div>
+
+        <div className="hero-center">
+          <h1 className="headline">
+            Hey There, <br /> I’m <span className="highlight-text">Ayush</span>
+          </h1>
+          
+          <div className="profile-container">
+            {/* BRUSH STROKE BACKGROUND EFFECT */}
+            <div className="brush-stroke"></div>
+            {/* PLACEHOLDER IMAGE - REPLACE WITH YOUR PHOTO */}
+            <img 
+              src="https://placehold.co/400x500/1e4d45/FFF?text=Your+Photo" 
+              alt="Ayush Singh" 
+              className="profile-img" 
+            />
+          </div>
+        </div>
+
+        <div className="hero-right">
+          <p className="bio-text">
+            I build scalable full-stack applications and solve complex problems. And I love what I do.
           </p>
           
-          <div className="contact-links">
-            <a href="mailto:ayushsingh.as1920@gmail.com" className="btn btn-primary">
-              <Mail size={18} /> Contact Me
-            </a>
-            {/* Replace '#' with your actual profile links */}
-            <a href="#" className="btn btn-outline"><Linkedin size={18} /> LinkedIn</a>
-            <a href="#" className="btn btn-outline"><Github size={18} /> GitHub</a>
+          <div className="badge-container">
+            <div className="circular-badge">
+              <span>Full Stack<br/>Developer</span>
+            </div>
           </div>
         </div>
       </header>
 
-      {/* --- SKILLS SECTION --- */}
-      <section className="section skills-section">
-        <h3 className="section-title">Technical Arsenal</h3>
-        <div className="skills-grid">
-          <div className="skill-card">
-            <Code className="skill-icon" />
-            <h4>Languages</h4>
-            <p>Java, JavaScript, SQL</p>
+      {/* --- STATS / EXPERIENCE BAR --- */}
+      <div className="stats-bar">
+        <div className="stat-item">
+          <span className="stat-number">2025</span>
+          <span className="stat-label">Internship @ Sabado</span>
+        </div>
+        <div className="stat-line"></div>
+         <div className="stat-item">
+          <span className="stat-number">300+</span>
+          <span className="stat-label">DSA Problems Solved</span>
+        </div>
+      </div>
+
+      {/* --- SERVICES SECTION --- */}
+      <section className="services-section" id="services">
+        
+        {/* Left Column: Service Cards */}
+        <div className="services-list">
+          <div className="service-card active">
+            <div className="icon-box"><Layout size={24} /></div>
+            <div className="service-info">
+              <h3>Frontend Dev</h3>
+              <p>React, Angular, Tailwind</p>
+            </div>
           </div>
-          <div className="skill-card">
-            <Layout className="skill-icon" />
-            <h4>Frontend</h4>
-            <p>React.js, Angular, HTML/CSS</p>
+
+          <div className="service-card">
+            <div className="icon-box"><Database size={24} /></div>
+            <div className="service-info">
+              <h3>Backend Dev</h3>
+              <p>Node.js, Express, SQL</p>
+            </div>
           </div>
-          <div className="skill-card">
-            <Database className="skill-icon" />
-            <h4>Backend</h4>
-            <p>Node.js, Express.js, MySQL</p>
+
+          <div className="service-card">
+            <div className="icon-box"><Smartphone size={24} /></div>
+            <div className="service-info">
+              <h3>App Dev</h3>
+              <p>Android, Java, XML</p>
+            </div>
           </div>
-          <div className="skill-card">
-            <Smartphone className="skill-icon" />
-            <h4>Tools</h4>
-            <p>Git, GitHub, Android Studio</p>
+        </div>
+
+        {/* Right Column: Text Content */}
+        <div className="services-content">
+          <h2 className="section-heading">What do I help?</h2>
+          <p className="section-desc">
+            I help companies build robust web solutions. From designing intuitive frontends to engineering complex backend logs and databases.
+          </p>
+          <p className="section-desc">
+            Currently working on high-performance applications using the latest tech stack like Next.js and Node.js.
+          </p>
+
+          <div className="project-stats">
+            <div className="p-stat">
+              <h3>3+</h3>
+              <p>Major Projects</p>
+            </div>
+            <div className="p-stat">
+              <h3>8.9</h3>
+              <p>CGPA</p>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* --- EXPERIENCE SECTION --- */}
-      <section className="section">
-        <h3 className="section-title">Experience</h3>
-        <div className="timeline">
-          <div className="timeline-item">
-            <div className="timeline-header">
-              <div>
-                <h4>Sabado Technologies</h4>
-                <span className="role">Full Stack Developer Intern</span>
-              </div>
-              <span className="date">2025 - Present</span>
-            </div>
-            <ul className="timeline-details">
-              <li>Built production-grade backend logging using <strong>Winston (Node.js)</strong> with daily log rotation and severity filtering.</li>
-              <li>Migrated Angular application from v13 to v20, implementing <strong>PrimeNG v19</strong> for consistent UI.</li>
-              <li>Enhanced code maintainability and runtime performance through strategic refactoring.</li>
-            </ul>
-          </div>
-        </div>
-      </section>
-
-      {/* --- PROJECTS SECTION --- */}
-      <section className="section bg-light">
-        <h3 className="section-title">Featured Projects</h3>
-        <div className="projects-grid">
-          
-          {/* Project 1: Hospital Management */}
-          <div className="project-card">
-            <div className="project-header">
-              <h4>Hospital Management System</h4>
-              <span className="badge">Desktop App</span>
-            </div>
-            <p className="project-desc">
-              A comprehensive system to manage administrative workflows, patient records, appointment scheduling, and billing modules.
-            </p>
-            <div className="tech-stack">
-              <span>Java</span>
-              <span>SQL</span>
-              <span>Swing</span>
-            </div>
-            <div className="project-links">
-              <a href="#" className="link-text">View Code <ExternalLink size={14} /></a>
-            </div>
-          </div>
-
-          {/* Project 2: QR Scanner */}
-          <div className="project-card">
-            <div className="project-header">
-              <h4>QR Code Scanner</h4>
-              <span className="badge">Android App</span>
-            </div>
-            <p className="project-desc">
-              Real-time QR code processing application featuring camera integration, result parsing, and intuitive UI handling.
-            </p>
-            <div className="tech-stack">
-              <span>Java</span>
-              <span>Android SDK</span>
-              <span>ZXing Lib</span>
-            </div>
-            <div className="project-links">
-              <a href="#" className="link-text">View Code <ExternalLink size={14} /></a>
-            </div>
-          </div>
-
-        </div>
-      </section>
-
-      {/* --- EDUCATION SECTION --- */}
-      <section className="section">
-        <h3 className="section-title">Education</h3>
-        <div className="education-card">
-          <div className="edu-header">
-            <h4>Madan Mohan Malaviya University of Technology</h4>
-            <span>2021 - 2025</span>
-          </div>
-          <p className="degree">B.Tech in Electrical Engineering</p>
-          <p className="gpa">GPA: 7.97</p>
-          <div className="achievements">
-            <small>• Core organizer of TechSrijan (Annual Tech Fest)</small>
-          </div>
-        </div>
-      </section>
-
-      {/* --- FOOTER --- */}
-      <footer className="footer">
-        <p>© 2026 Ayush Singh. Built with React.</p>
-        <div className="footer-contact">
-          <span><Phone size={14} /> +91 8299540876</span>
-          <span><Mail size={14} /> ayushsingh.as1920@gmail.com</span>
+      {/* --- FOOTER CTA --- */}
+      <footer className="footer-cta">
+        <div className="cta-content">
+          <h2>Let's make something amazing together.</h2>
+          <p>Start by <a href="mailto:ayushsingh.as1920@gmail.com" className="say-hi">saying hi</a></p>
         </div>
       </footer>
     </div>

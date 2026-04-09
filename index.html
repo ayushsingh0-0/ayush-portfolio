@@ -1,13 +1,194 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ayush-portfolio</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ayush Singh | Product Designer</title>
+    <link rel="stylesheet" href="index.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Inter:wght@400;500;600;700&family=Outfit:wght@700;800&display=swap" rel="stylesheet">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+    <header class="header">
+        <nav class="nav container">
+            <div class="logo handwritten">Ayush</div>
+            <ul class="nav-links">
+                <li><a href="#services">SERVICES</a></li>
+                <li><a href="#portfolio">WORKS</a></li>
+                <li><a href="#notes">NOTES</a></li>
+                <li><a href="#experience">EXPERIENCE</a></li>
+            </ul>
+            <div class="nav-contact">
+                <span class="phone">+91 123 456 7890</span>
+                <a href="#contact" class="call-btn"><i data-lucide="phone"></i></a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero container">
+            <div class="hero-layout">
+                <!-- Hero Left Side -->
+                <div class="hero-side left">
+                    <a href="mailto:ayush10@gmail.com" class="hero-email">ayush10@gmail.com</a>
+                    <div class="stats-item">
+                        <span class="number">10</span>
+                        <span class="label">YEARS <br> EXPERIENCE</span>
+                    </div>
+                </div>
+
+                <!-- Hero Content (Center) -->
+                <div class="hero-main">
+                    <h1>Hey There, <br> I'm Ayush</h1>
+                    <div class="hero-image">
+                        <div class="brush-stroke-bg"></div>
+                        <img src="https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?q=80&w=600&auto=format&fit=crop" alt="Profile" class="profile-img">
+                    </div>
+                </div>
+
+                <!-- Hero Right Side -->
+                <div class="hero-side right">
+                    <p class="hero-desc">I design beautifully simple things, And I love what i do.</p>
+                    <div class="badge-container">
+                        <div class="circular-badge">
+                            <div class="badge-logo"><i data-lucide="crown"></i></div>
+                        </div>
+                        <div class="badge-text">
+                            <span>IDF CERTIFIED PROFESSIONAL</span>
+                            <span class="role">UI/UX DESIGNER</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="services container">
+            <div class="section-header">
+                <h2>What do I help?</h2>
+                <p>I provide a wide range of design services to help your business grow and reach its potential.</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="icon-box"><i data-lucide="layout"></i></div>
+                    <h3>UI/UX Design</h3>
+                    <p>Creating intuitive and beautiful interfaces for web and mobile applications.</p>
+                </div>
+                <div class="service-card active">
+                    <div class="icon-box"><i data-lucide="palette"></i></div>
+                    <h3>Branding</h3>
+                    <p>Building strong visual identities that resonate with your target audience.</p>
+                </div>
+                <div class="service-card">
+                    <div class="icon-box"><i data-lucide="code-2"></i></div>
+                    <h3>Development</h3>
+                    <p>Turning designs into high-performance, responsive websites and apps.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience" class="experience container">
+            <div class="experience-layout">
+                <div class="experience-content">
+                    <h2>Work Experience</h2>
+                    <p>My professional journey through some of the best design studios and tech companies.</p>
+                    <a href="#" class="btn btn-outline">Download Resume</a>
+                </div>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="date">2022 - Present</div>
+                        <div class="dot"></div>
+                        <div class="details">
+                            <h3>Senior UI/UX Designer</h3>
+                            <p>Freelance & Remote</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="date">2019 - 2021</div>
+                        <div class="dot"></div>
+                        <div class="details">
+                            <h3>Product Designer</h3>
+                            <p>Global Tech Solutions</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="date">2017 - 2019</div>
+                        <div class="dot"></div>
+                        <div class="details">
+                            <h3>Junior Designer</h3>
+                            <p>Creative Studio Inc.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Portfolio Section -->
+        <section id="portfolio" class="portfolio container">
+            <div class="section-header">
+                <h2>Recent Projects</h2>
+                <div class="portfolio-filters">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="ui">UI Design</button>
+                    <button class="filter-btn" data-filter="ux">UX Research</button>
+                    <button class="filter-btn" data-filter="branding">Branding</button>
+                </div>
+            </div>
+            <div class="portfolio-grid" id="portfolio-grid">
+                <!-- Cards will be populated or stay static -->
+                <div class="project-card" data-category="ui">
+                    <img src="https://images.unsplash.com/photo-1547658719-da2b51169166?q=80&w=600&auto=format&fit=crop" alt="Project 1">
+                    <div class="project-info">
+                        <h3>FitTrack App</h3>
+                        <p>Mobile Health & Fitness UI</p>
+                    </div>
+                </div>
+                <div class="project-card" data-category="ux">
+                    <img src="https://images.unsplash.com/photo-1586717791821-3f44a563eb4c?q=80&w=600&auto=format&fit=crop" alt="Project 2">
+                    <div class="project-info">
+                        <h3>EcoShop E-com</h3>
+                        <p>Sustainable Shopping UX</p>
+                    </div>
+                </div>
+                <div class="project-card" data-category="branding">
+                    <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=600&auto=format&fit=crop" alt="Project 3">
+                    <div class="project-info">
+                        <h3>DataViz SaaS</h3>
+                        <p>Analytics Dashboard Branding</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-content">
+            <div class="footer-cta">
+                <h2>Let's work together</h2>
+                <p>Have a project in mind? Let's discuss how we can bring it to life.</p>
+                <a href="mailto:hello@ayush.design" class="btn btn-primary">Say Hello</a>
+            </div>
+            <div class="footer-bottom">
+                <div class="logo">Ayush.</div>
+                <p>&copy; 2026 Ayush Singh. All rights reserved.</p>
+                <div class="social-links">
+                    <a href="#"><i data-lucide="twitter"></i></a>
+                    <a href="#"><i data-lucide="github"></i></a>
+                    <a href="#"><i data-lucide="linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="index.js"></script>
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
 </html>
